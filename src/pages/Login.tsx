@@ -68,7 +68,11 @@ export default function Login() {
                     <div style={{ width: '75%' }}>
                         {alert && alert.message && <Alert severity={alert.severity}>{alert.message}</Alert>}
 
-                        <img src={'./src/assets/images/logo-cmd.svg'} />
+                        <img
+                            src={
+                                'https://res.cloudinary.com/dhwwzz0u2/image/upload/v1703311049/chapter-8/logo-cmd_uhvujj.svg'
+                            }
+                        />
                         <h2>Welcome, Admin BCR</h2>
                         <TextField
                             label="Username"
@@ -94,7 +98,9 @@ export default function Login() {
                 </Form>
                 <Background>
                     <img
-                        src={'./src/assets/images/bg-cover.png'}
+                        src={
+                            'https://res.cloudinary.com/dhwwzz0u2/image/upload/v1703311051/chapter-8/bg-cover_hrnerv.png'
+                        }
                         alt="bg-cover"
                         style={{
                             width: '100%',
