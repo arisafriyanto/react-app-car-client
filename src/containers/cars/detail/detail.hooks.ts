@@ -12,7 +12,7 @@ export function useDetail(id: string) {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:8000/api/cars/${id}`);
+                const response = await axios.get(`https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/${id}`);
                 setFileItem(response.data.data.image);
                 setCar(response.data.data);
             } catch (error) {

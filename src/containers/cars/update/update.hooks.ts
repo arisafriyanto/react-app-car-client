@@ -29,7 +29,7 @@ export function useUpdate() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/cars/${params.id}`);
+                const response = await axios.get(`https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/${params.id}`);
                 setFileItem(response.data.data.image);
                 setFormValues(response.data.data);
             } catch (error) {
@@ -48,11 +48,15 @@ export function useUpdate() {
                 const formData = new FormData();
                 formData.append('image', files[0]);
 
-                const response = await axios.post('http://localhost:8000/api/cars/upload', formData, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`,
-                    },
-                });
+                const response = await axios.post(
+                    'https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/upload',
+                    formData,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${localStorage.getItem('token')}`,
+                        },
+                    }
+                );
 
                 setFileItem(response.data.data);
             } catch (error) {
@@ -76,7 +80,7 @@ export function useUpdate() {
             setLoadingSubmit(true);
             const payload = { ...formValues, image: fileItem };
 
-            await axios.put(`http://localhost:8000/api/cars/${params.id}`, payload, {
+            await axios.put(`https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/${params.id}`, payload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },

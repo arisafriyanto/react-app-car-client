@@ -39,7 +39,10 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/login', { username, password });
+            const response = await axios.post('https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/auth/login', {
+                username,
+                password,
+            });
 
             localStorage.setItem('token', response?.data?.data.token);
 

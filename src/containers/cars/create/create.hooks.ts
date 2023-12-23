@@ -16,7 +16,7 @@ export default function useCreate() {
         try {
             setLoadingSubmit(true);
             const payload = { ...formValues, image: fileItem };
-            await axios.post('http://localhost:8000/api/cars', payload, {
+            await axios.post('https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars', payload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },
@@ -37,11 +37,15 @@ export default function useCreate() {
                 const formData = new FormData();
                 formData.append('image', files[0]);
 
-                const response = await axios.post('http://localhost:8000/api/cars/upload', formData, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`,
-                    },
-                });
+                const response = await axios.post(
+                    'https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/upload',
+                    formData,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${localStorage.getItem('token')}`,
+                        },
+                    }
+                );
                 setFileItem(response.data.data);
             } catch (error) {
                 console.log('error > ', error);

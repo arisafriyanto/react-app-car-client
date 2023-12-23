@@ -4,8 +4,6 @@ import { ICars } from '../cars.types';
 import { IApiResponse, IMeta, IParams } from '../../../services/types';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:8000/api/cars';
-
 export default function useList() {
     const navigate = useNavigate();
     const [params, setParams] = useState<IParams>({
@@ -34,7 +32,7 @@ export default function useList() {
                     return;
                 }
 
-                await axios.delete(`${API_BASE_URL}/${record.id}`, {
+                await axios.delete(`https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars/${record.id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -54,12 +52,15 @@ export default function useList() {
     const fetchCars = async () => {
         try {
             setLoading(true);
-            const response = await axios.get<IApiResponse<ICars[]>>(API_BASE_URL, {
-                params,
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}` || '',
-                },
-            });
+            const response = await axios.get<IApiResponse<ICars[]>>(
+                `https://app-car-api-xkq7x2rzoa-uc.a.run.app/api/cars`,
+                {
+                    params,
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}` || '',
+                    },
+                }
+            );
             setCars(response.data.data);
             setMeta(response.data.meta);
         } catch (error) {
