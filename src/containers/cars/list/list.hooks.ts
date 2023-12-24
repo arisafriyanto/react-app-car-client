@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
 import { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
 import { ICars } from '../cars.types';

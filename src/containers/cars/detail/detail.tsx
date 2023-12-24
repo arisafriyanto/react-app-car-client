@@ -22,7 +22,7 @@ export default function CarDetail() {
                     Detail Information
                 </Typography>
 
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} data-testid={'table-row'}>
                     <Box sx={{ width: '100%' }}>
                         <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
                             Plate

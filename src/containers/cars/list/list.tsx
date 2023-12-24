@@ -46,6 +46,7 @@ export default function List() {
         }
         return cars?.map((record: ICars) => (
             <TableRow
+                data-testid={'table-rows'}
                 key={record.id}
                 sx={{
                     '&:last-child td, &:last-child th': { border: 0 },
