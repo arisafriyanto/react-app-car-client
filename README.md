@@ -1,30 +1,23 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### URL Service
 
-Currently, two official plugins are available:
+> <p>Backend: https://app-car-api-xkq7x2rzoa-uc.a.run.app</p>
+> <p>Frontend: https://react-app-car-client.vercel.app</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Notes
 
-## Expanding the ESLint configuration
+### Super Admin Account
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p>Username: superfranky</p>
+<p>Password: superfranky</p>
 
-- Configure the top-level `parserOptions` property like this:
+### Admin Account
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<p>Username: admin1</p>
+<p>Password: admin1</p>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### User Account
+
+<p>Username: member1</p>
+<p>Password: member1</p>
